@@ -35,7 +35,7 @@ class DataTypes {
     x = 10;
   }
 
-  public AboutNUmber(): void {
+  public Number(): void {
     //Number
     //Тип Number представляет числа, причем все числа в TypeScript, как и в JavaScript, 
     //являются числами с плавающей точкой. TS поддерживает двоичную, восьмеричную, 
@@ -47,7 +47,7 @@ class DataTypes {
 
   }
 
-  public AboutString(): void {
+  public String(): void {
     //String
     //Кроме того, TypeScript поддерживает такую функциональность, как шаблоны строк, 
     //то есть мы можем задать шаблон в косых кавычках (`), как если бы мы писали обычную 
@@ -65,7 +65,7 @@ class DataTypes {
   }
 
 
-  public AboutNullAndUndefined(): void {
+  public NullAndUndefined(): void {
 
     let a: undefined = undefined;
     let b: null = null;
@@ -87,7 +87,7 @@ class DataTypes {
     //собственно как и в javascript.
   }
 
-  public AboutArrays(): void {
+  public Arrays(): void {
     let list: number[] = [10, 20, 30];
     let colors: string[] = ["red", "green", "blue"];
     console.log(list[0]);   //10
@@ -100,7 +100,7 @@ class DataTypes {
     console.log(names[1]);  // Bob
   }
 
-  public AboutTurple(): void {
+  public Turple(): void {
     //Кортежи (Tuples) также, как и массивы, представляют набор элементов, для которых уже заранее известен тип. 
 
     // определение кортежа - кортеж состоит из двух элементов - строки и числа
@@ -119,7 +119,7 @@ class DataTypes {
     let arrayTurple: Array<[string, number]> = new Array<[string, number]>();
   }
 
-  public AboutEnum(): void {
+  public Enum(): void {
     enum Season { Winter = 0, Spring = 1, Summer = 2, Autumn = 45 };
     let current: Season = Season.Summer;
     console.log(current);
@@ -129,7 +129,7 @@ class DataTypes {
     console.log(currentName);   // Summer
   }
 
-  public AboutAny(): void {
+  public Any(): void {
     let someVar: any = "hello";
     console.log(someVar);   // сейчас someVar - это string
     someVar = 20;
@@ -138,7 +138,7 @@ class DataTypes {
     var arrayOfAny: any[] = [24, "Tom", false];
   }
 
-  public AboutAnonymousObject(): void {
+  public AnonymousObject(): void {
     let person = { name: "Tom", age: 23 };
     console.log(person.name);
     // альтернативный вариант получения свойства

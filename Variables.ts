@@ -1,5 +1,5 @@
 class Valiables {
-  public AboutVariables(): void {
+  public Variables(): void {
     //https://metanit.com/web/typescript/2.1.php
 
     var variable1 = 5;
@@ -10,7 +10,7 @@ class Valiables {
     const variable3 = 5;
   }
 
-  public AboutVar(): void {
+  public Var(): void {
     //Применение let является более предпочтительным, поскольку 
     //позволяет избежать ряд проблем, связанных с объявлением 
     //переменных. В частности, с помощью var мы можем определить 
@@ -22,7 +22,7 @@ class Valiables {
     console.log(x);
   }
 
-  public AboutLet(): void {
+  public Let(): void {
     //Если программа большая, то мы можем не уследить за тем, 
     //что такая переменная уже объявлена, что является 
     //источником потенциальных ошибок. Подобную проблему позволяет решить let:

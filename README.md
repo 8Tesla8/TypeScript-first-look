@@ -2,4 +2,4 @@
 TypeScript syntax
 
 
-finished on https://metanit.com/web/typescript/2.4.php
+finished on https://metanit.com/web/typescript/2.3.php
