@@ -86,3 +86,66 @@ class Modifier2 {
 class Modifier3 {
     constructor(public name: string, public age: number) { }
 }
+
+
+// Интерфейсы массивов
+// Интерфейсы массивов описывают объекты, к которым можно обращаться по индексу, 
+// как, например, к массивам
+interface StringArray {
+    [index: number]: string;
+}
+ 
+let phones: StringArray;
+phones = ["iPhone 7", "HTC 10", "HP Elite x3"];
+ 
+let myPhone: string = phones[0];
+console.log(myPhone);
+
+// Здесь определен интерфейс StringArray, который содержит сигнатуру массива. 
+// Эта сигнатура указывает, что объект, который реализует StringArray, может 
+// индексироваться с помощью чисел (объекта типа number). И, кроме того, данный 
+// объект должен хранить объекты типа string, то есть строки.
+// Выше индекс представлял тип number. Но мы можем использовать для индексации и тип string:
+interface Dictionary {
+    [index: string]: string;
+}
+ 
+var colors: Dictionary = {};
+colors["red"] = "#ff0000";
+colors["green"] = "#00ff00";
+colors["blue"] = "#0000ff";
+ 
+console.log(colors["red"]);
+
+// Гибридные интерфейсы
+// Интерфейсы могут сочетать различные стили, могут применяться сразу как к определению 
+// объекта, так и к определению функции:
+interface PersonInfo {
+    (name: string, surname: string):void;
+    fullName: string;
+    password: string;
+    authenticate(): void;
+}
+ 
+function personBuilder(): PersonInfo {
+ 
+    let person = <PersonInfo>function (name: string, surname: string): void{
+        person.fullName = name + " " + surname;
+    };
+    person.authenticate = function () {
+        console.log(person.fullName + " входит в систему с паролем " + person.password);
+    };
+    return person;
+}
+ 
+let t4 = personBuilder();
+t4("Tom", "Simpson");
+t4.password = "qwerty"; 
+
+// Тип функции, определяемый в таком гибридном интерфейсе, как правило, 
+// выступает в роли конструктора объекта. В данном случае такой конструктор 
+// имеет тип (name: string, surname: string):void;.
+
+// А функция, которая представляет данный интерфейс (в данном случае - функция 
+// personBuilder), реализует эту функцию конструктора, и также может 
+// использовать другие свойства и методы, которые были определены в интерфейсе.
