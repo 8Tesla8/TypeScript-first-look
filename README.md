@@ -2,4 +2,5 @@
 TypeScript syntax
 
 
-https://metanit.com/web/typescript/3.9.php
+https://metanit.com/web/typescript/3.6.php
+
